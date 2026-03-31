@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7f794ea6f0.js" crossorigin="anonymous"></script>
+    <title>Soul Type — Streetwear</title>
+</head>
+<body>
+    <header id="header" class="site-header">
+        <nav id="nav-bar" class="nav-bar" aria-label="Primary">
+            <div class="brand">
+                <img id="header-img" src="https://i.pinimg.com/736x/5c/e9/7c/5ce97c93dcee231668539fe3052f10f3.jpg" alt="Soul Type logo" width="50" height="50">
+                <h1 class="brand-name">Soul Type</h1>
+            </div>
+            <ul>
+                <li><a class="nav-link" href="#header">Home</a></li>
+                <li><a class="nav-link" href="#pricing">Tshirt</a></li>
+                <li><a class="nav-link" href="#feature">Benefits</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <button type="button" id="cart-toggle" class="cart-toggle" aria-expanded="false" aria-controls="cart-panel" aria-label="Open shopping cart">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span id="cart-count" class="cart-count" hidden>0</span>
+            </button>
+        </nav>
+    </header>
+
+    <aside id="cart-panel" class="cart-panel" aria-hidden="true" aria-label="Shopping cart">
+        <div class="cart-panel-header">
+            <h2>Your cart</h2>
+            <button type="button" id="cart-close" class="cart-close" aria-label="Close cart">&times;</button>
+        </div>
+        <div id="cart-empty" class="cart-empty">Your cart is empty. Add items from below.</div>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div id="cart-footer" class="cart-footer" hidden>
+            <p class="cart-total"><strong>Total:</strong> <span id="cart-total">$0.00</span></p>
+            <button type="button" id="checkout-btn" class="btn-checkout">Checkout</button>
+            <button type="button" id="clear-cart" class="btn-clear">Clear cart</button>
+        </div>
+    </aside>
+    <div id="cart-backdrop" class="cart-backdrop" hidden></div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <main>
+        <section class="hero" aria-label="Featured">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <p class="hero-eyebrow">New drops</p>
+                <h2 class="hero-title">Wear the attitude</h2>
+                <p class="hero-lede">Varsity heat, graphic tees, and limited runs — built for the street, not the algorithm.</p>
+                <div class="hero-actions">
+                    <a class="btn-hero btn-hero-primary" href="#pricing">Shop now</a>
+                    <a class="btn-hero btn-hero-ghost" href="https://www.youtube.com/watch?v=Nq0lPYj9XHE" target="_blank" rel="noopener noreferrer">Watch lookbook</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="trending-section" aria-labelledby="trending-heading">
+            <div class="section-head">
+                <span class="section-label" id="trending-heading">Trending</span>
+                <p class="section-sub">Most wanted this week</p>
+            </div>
+            <div class="product-grid">
+                <article class="product-card" id="tokyo-jacket" data-id="tokyo-jacket">
+                    <h3 class="product-title">TOKYO REVENGER BOOMER JACKET</h3>
+                    <img src="https://i.pinimg.com/736x/7a/47/e2/7a47e2849222aaf15888742d87f760c8.jpg" alt="Tokyo Revengers jacket" width="550" height="auto" loading="lazy">
+                    <p class="product-price" data-price="50">$50</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy" data-id="tokyo-jacket" data-name="Tokyo Revenger Boomer Jacket" data-price="50">Add to cart</button>
+                        <a class="btn-view" href="#tokyo-jacket">View</a>
+                    </div>
+                </article>
+                <article class="product-card" id="initial-d-jacket" data-id="initial-d-jacket">
+                    <h3 class="product-title">INITIAL D BOOMER JACKET</h3>
+                    <img src="https://i.pinimg.com/736x/a6/87/1d/a6871d23cdc6088d401af65de910fdbf.jpg" alt="Initial D jacket" width="550" height="auto" loading="lazy">
+                    <p class="product-price" data-price="65">$65</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy" data-id="initial-d-jacket" data-name="Initial D Boomer Jacket" data-price="65">Add to cart</button>
+                        <a class="btn-view" href="#initial-d-jacket">View</a>
+                    </div>
+                </article>
+                <article class="product-card" id="soul-tshirt" data-id="soul-tshirt">
+                    <h3 class="product-title">SOUL TYPE TSHIRT</h3>
+                    <img src="https://i.pinimg.com/736x/68/40/09/684009a5a2b90dd3b30bc715af88678e.jpg" alt="Soul Type t-shirt" width="550" height="auto" loading="lazy">
+                    <p class="product-price" data-price="20">$20</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy" data-id="soul-tshirt" data-name="Soul Type Tshirt" data-price="20">Add to cart</button>
+                        <a class="btn-view" href="#soul-tshirt">View</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="feature">
+            <div class="grid">
+                <div class="icons">
+                    <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                </div>
+                <div class="desc">
+                    <h2>Free Shipping</h2>
+                    <p>Have your items delivered the way you want, for free. Find out the best delivery option that fits your liking</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="icons">
+                    <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+                </div>
+                <div class="desc">
+                    <h2>Shopping Extra Sizes Exclusive Online</h2>
+                    <p>There's wider range of size just for you. Choose from our selection of items to find the best fit</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="icons">
+                    <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                </div>
+                <div class="desc">
+                    <h2>COUPON MECHANICS</h2>
+                    <p>You can earn coupon with your Soul Type Online Store</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Stay in the loop</h2>
+            <form id="form" class="signup-form" action="https://www.freecodecamp.com/email-submit" novalidate>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+                <input id="submit" type="submit" value="Sign Up">
+                <p id="form-message" class="form-message" role="status" aria-live="polite" hidden></p>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <nav id="nav-bar2" aria-label="Footer">
+            <ul>
+                <li><a class="nav-link2" href="#" data-modal="privacy">Privacy</a></li>
+                <li><a class="nav-link2" href="#" data-modal="terms">Terms</a></li>
+                <li><a class="nav-link2" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <dialog id="info-modal" class="info-modal" aria-labelledby="modal-title">
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+        <h2 id="modal-title"></h2>
+        <div id="modal-body" class="modal-body"></div>
+    </dialog>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
