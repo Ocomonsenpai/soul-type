@@ -132,7 +132,7 @@ h1.brand-name {
     inset: 0;
     background-color: #141416;
     background-image: var(--hero-overlay),
-        url("https://i.pinimg.com/736x/7a/47/e2/7a47e2849222aaf15888742d87f760c8.jpg");
+        url("images/soul-type-hero.png");
     background-size: cover;
     background-position: center 30%;
     transform: scale(1.02);
